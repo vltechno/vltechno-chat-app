@@ -26,9 +26,34 @@
 		</div>
 	</div>
 
+	<script id="msg-tpl" type="text/template">
+		<li class="msg">
+			<div class="message__title">
+				<h4>{{from}}</h4>
+				<span>{{createdAt}}</span>
+			</div>
+			<div class="message__body">	
+				<p>{{text}}</p>
+			</div>
+		</li>
+	</script>
+	<script id="msg-tpl-location" type="text/template">
+		<li class="msg">
+			<div class="message__title">
+				<h4>{{from}}</h4>
+				<span>{{createdAt}}</span>
+			</div>
+			<div class="message__body">	
+				<a href="{{mlink}}" target="_blank">My Current Location</a>
+			</div>
+		</li>
+	</script>
+
 	<script src="/socket.io/socket.io.js"></script>
 	<script src="/js/jquery-3.3.1.min.js"></script>
 	<script src="/js/index.js"></script>
+	<script src="/js/moment.js"></script>
+	<script src="/js/mustache.js"></script>
 
 </body>
 </html>
