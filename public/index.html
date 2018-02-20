@@ -3,11 +3,32 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="">
+	<title>Chat App</title>
+	<link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-	<p>Welcome to vltechno</p>
+<body class="chat">
+
+	<div class="chat__sidebar">
+		<h3>People</h3>
+		<div id='users'>
+		</div>
+	</div>
+
+	<div class="chat__main">
+		<ol id = 'msg-ol' class="chat__messages">
+		</ol>
+		<div class="chat__footer">
+			<form id='msg-form'>
+				<input type="text" name="msg" placeholder="Please type a message here" autofocus autocomplete="off">
+				<button>Send</button>
+			</form>
+			<button id="send-location">send location</button>	
+		</div>
+	</div>
+
 	<script src="/socket.io/socket.io.js"></script>
+	<script src="/js/jquery-3.3.1.min.js"></script>
 	<script src="/js/index.js"></script>
+
+</body>
 </html>
